@@ -89,7 +89,7 @@ function Level10()
 
 	if place_meeting(x + hsp, y, obj_collision)
 	{
-	    while !place_meeting(x+sign(hsp),y, obj_collision)
+	    while !place_meeting(x + sign(hsp), y, obj_collision)
 	    {
 	        x += sign(hsp);
 	    }

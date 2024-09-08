@@ -38,7 +38,7 @@ function Level5()
 
 	if place_meeting(x + hsp, y, obj_collision)
 	{
-	    while !place_meeting(x+sign(hsp),y, obj_collision)
+	    while !place_meeting(x + sign(hsp), y, obj_collision)
 	    {
 	        x += sign(hsp);
 	    }
@@ -52,7 +52,6 @@ function Level5()
 	    {
 	        y += sign(vsp);
 	    }
-	
 	    vsp = 0;
 	}
 	y += vsp;

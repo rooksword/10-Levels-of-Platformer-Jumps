@@ -33,7 +33,7 @@ function Level4()
 
 	if place_meeting(x + hsp, y, obj_collision)
 	{
-	    while !place_meeting(x+sign(hsp),y, obj_collision)
+	    while !place_meeting(x + sign(hsp), y, obj_collision)
 	    {
 	        x += sign(hsp);
 	    }
@@ -47,8 +47,6 @@ function Level4()
 	    {
 	        y += sign(vsp);
 	    }
-		if vsp > grav * 5 if !audio_is_playing(snd_land) audio_play_sound(snd_land, 10, false);
-	
 	    vsp = 0;
 	}
 	y += vsp;
