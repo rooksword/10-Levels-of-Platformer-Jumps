@@ -42,6 +42,14 @@ enum jump_types
 
 jump_type = jump_types.NORMAL;
 
+jump = function(_multiplier)
+{
+	audio_play_sound(snd_jump, 10, false);
+		
+	vsp = -jspd * _multiplier;
+	key_jump = 0;
+}
+
 // Level 7
 
 jump_capacity_max = 2;

@@ -5,17 +5,6 @@ function Level10()
 
 	// Jump
 
-	function Jump(_multiplier)
-	{
-		audio_play_sound(snd_jump, 10, false);
-	
-		vsp = -jspd * _multiplier;
-		key_jump = 0;
-		jump_capacity--;
-		
-		xscale = 0.5;
-	}
-
 	vsp += grav;
 
 	if place_meeting(x, y + 1, obj_collision)
@@ -38,7 +27,7 @@ function Level10()
 	
 		if _inst.object_index == obj_bounce
 		{
-			Jump(1.5);
+			jump(1.5);
 			
 			_inst.image_yscale = 0;
 		
@@ -62,7 +51,7 @@ function Level10()
 
 	if key_jump > 0 and _can_jump
 	{
-		Jump(1);
+		jump(1);
 		
 		if _wall_jump != 0 and !place_meeting(x, y + 1, obj_collision)
 		{

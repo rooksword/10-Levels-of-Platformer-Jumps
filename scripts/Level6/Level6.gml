@@ -5,14 +5,6 @@ function Level6()
 
 	// Jump
 
-	function Jump(_multiplier)
-	{
-		audio_play_sound(snd_jump, 10, false);
-		
-		vsp = -jspd * _multiplier;
-		key_jump = 0;
-	}
-
 	vsp += grav;
 
 	if place_meeting(x, y + 1, obj_collision)
@@ -28,7 +20,7 @@ function Level6()
 
 		if _inst.object_index == obj_bounce
 		{
-			Jump(1.5);
+			jump(1.5);
 			jump_type = jump_types.BOUNCE;
 		}
 		else if _inst.object_index == obj_wall
@@ -45,7 +37,7 @@ function Level6()
 	{
 		if key_jump > 0 and coyote_time > 0
 		{
-			Jump(1);
+			jump(1);
 		}
 
 		if vsp < 0 and !keyboard_check(vk_up)
