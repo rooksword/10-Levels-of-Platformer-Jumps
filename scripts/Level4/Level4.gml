@@ -11,7 +11,7 @@ function Level4()
 	{
 		if coyote_time != coyote_time_max
 		{
-			if !audio_is_playing(snd_land) audio_play_sound(snd_land, 10, false);
+			audio_play_sound(snd_land, 10, false);
 			
 			coyote_time = coyote_time_max;
 		}
